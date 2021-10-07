@@ -1,9 +1,1 @@
-{
-  "version" : 0.1,
-  "globalEnvironmentVariables" : [
-  ],
-  "tasks" : [
-  ],
-  "stages" : [
-  ]
-}
+{"globalEnvironmentVariables":["var1=www.mydatabase.com:2000"],"tasks":[{"title":"DownloadData","name":"dataloadData","environmentVariables":["APIToken=abc","db=${var}"],"parameters":["--verbose"]},{"title":"PredictScalar","name":"predictScalar","parameters":["--time=1"]}],"stages":[{"name":"dataloadData:1","parameters":["--verbose"],"environmentVariables":["db=${var}"],"dependsOn":[],"location":{"x":349.9935693690631,"y":185.55109106198856}},{"name":"predictScalar:1","parameters":[],"environmentVariables":[],"dependsOn":["dataloadData:1"],"location":{"x":903.9169695587036,"y":243.05179004361213}}]}
